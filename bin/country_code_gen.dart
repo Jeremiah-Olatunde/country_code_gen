@@ -2,6 +2,10 @@ import 'dart:io';
 import 'dart:convert';
 
 void main(List<String> arguments) async {
+}
+
+
+Future<String> generateCountryDataJson() async {
   final String jsonRaw = await File('raw.json').readAsString();
   final List<dynamic> jsonParsed = json.decode(jsonRaw);
 
@@ -35,8 +39,7 @@ void main(List<String> arguments) async {
           identifier.split('').every(RegExp(r'[A-Za-z]').hasMatch);
 
       bool isValidTitle = title != null;
-
-      return '$accum, { "code": "$code", "name": "$name", "identifier": ${isValidIdentifier ? '"$identifier"' : null}, "title": ${isValidTitle ? null : '"$title"'} }';
+      return '$accum${accum == '' ? '' : ','} { "code": "$code", "name": "$name", "identifier": ${isValidIdentifier ? '"$identifier"' : null}, "title": ${isValidTitle ? '"$title"' : null} }';
     }
 
     throw 'invalid json structure';
@@ -45,4 +48,6 @@ void main(List<String> arguments) async {
   jsonGenerated = '[$jsonGenerated]';
 
   await File('country_codes.json').writeAsString(jsonGenerated);
+
+  return jsonGenerated;
 }
