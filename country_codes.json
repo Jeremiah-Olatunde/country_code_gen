@@ -190,8 +190,8 @@
   },
   {
     "code": "CD",
-    "name": "Congo, Democratic Republic of",
-    "identifier": "Congo",
+    "name": "DR. Congo, Democratic Republic of",
+    "identifier": "DRCongo",
     "title": "Democratic Republic of"
   },
   {
@@ -202,8 +202,8 @@
   },
   {
     "code": "CG",
-    "name": "Congo, People's Republic of",
-    "identifier": "Congo",
+    "name": "PR. Congo, People's Republic of",
+    "identifier": "PRCongo",
     "title": "People's Republic of"
   },
   {
@@ -621,14 +621,14 @@
   },
   {
     "code": "KP",
-    "name": "Korea, Democratic People's Republic of",
-    "identifier": "Korea",
+    "name": "North Korea, Democratic People's Republic of",
+    "identifier": "NorthKorea",
     "title": "Democratic People's Republic of"
   },
   {
     "code": "KR",
-    "name": "Korea, Republic of",
-    "identifier": "Korea",
+    "name": "South Korea, Republic of",
+    "identifier": "SouthKorea",
     "title": "Republic of"
   },
   {
