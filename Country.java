@@ -45,9 +45,9 @@ import java.util.UUID;
   @JsonSubTypes.Type(value = Country.Belize.class, name = "BZ"),
   @JsonSubTypes.Type(value = Country.Canada.class, name = "CA"),
   @JsonSubTypes.Type(value = Country.CocosIslands.class, name = "CC"),
-  @JsonSubTypes.Type(value = Country.Congo.class, name = "CD"),
+  @JsonSubTypes.Type(value = Country.DRCongo.class, name = "CD"),
   @JsonSubTypes.Type(value = Country.CentralAfricanRepublic.class, name = "CF"),
-  @JsonSubTypes.Type(value = Country.Congo.class, name = "CG"),
+  @JsonSubTypes.Type(value = Country.PRCongo.class, name = "CG"),
   @JsonSubTypes.Type(value = Country.Switzerland.class, name = "CH"),
   @JsonSubTypes.Type(value = Country.CoteDIvoire.class, name = "CI"),
   @JsonSubTypes.Type(value = Country.CookIslands.class, name = "CK"),
@@ -125,8 +125,8 @@ import java.util.UUID;
   @JsonSubTypes.Type(value = Country.Kiribati.class, name = "KI"),
   @JsonSubTypes.Type(value = Country.Comoros.class, name = "KM"),
   @JsonSubTypes.Type(value = Country.StKittsAndNevis.class, name = "KN"),
-  @JsonSubTypes.Type(value = Country.Korea.class, name = "KP"),
-  @JsonSubTypes.Type(value = Country.Korea.class, name = "KR"),
+  @JsonSubTypes.Type(value = Country.NorthKorea.class, name = "KP"),
+  @JsonSubTypes.Type(value = Country.SouthKorea.class, name = "KR"),
   @JsonSubTypes.Type(value = Country.Kuwait.class, name = "KW"),
   @JsonSubTypes.Type(value = Country.CaymanIslands.class, name = "KY"),
   @JsonSubTypes.Type(value = Country.Kazakhstan.class, name = "KZ"),
@@ -255,7 +255,7 @@ import java.util.UUID;
   @JsonSubTypes.Type(value = Country.Zambia.class, name = "ZM"),
   @JsonSubTypes.Type(value = Country.Zimbabwe.class, name = "ZW"),
 })  
-public sealed interface Country extends AdministrativeArea permits  Country.Andorra, Country.UnitedArabEmirates, Country.Afghanistan, Country.AntiguaAndBarbuda, Country.Anguilla, Country.Albania, Country.Armenia, Country.Angola, Country.Antarctica, Country.Argentina, Country.AmericanSamoa, Country.Austria, Country.Australia, Country.Aruba, Country.Azerbaijan, Country.BosniaAndHerzegovina, Country.Barbados, Country.Bangladesh, Country.Belgium, Country.BurkinaFaso, Country.Bulgaria, Country.Bahrain, Country.Burundi, Country.Benin, Country.Bermuda, Country.BruneiDarussalam, Country.Bolivia, Country.Bonaire, Country.Brazil, Country.Bahamas, Country.Bhutan, Country.BouvetIsland, Country.Botswana, Country.Belarus, Country.Belize, Country.Canada, Country.CocosIslands, Country.Congo, Country.CentralAfricanRepublic, Country.Congo, Country.Switzerland, Country.CoteDIvoire, Country.CookIslands, Country.Chile, Country.Cameroon, Country.China, Country.Colombia, Country.CostaRica, Country.Cuba, Country.CapeVerde, Country.ChristmasIsland, Country.Cyprus, Country.CzechRepublic, Country.Germany, Country.Djibouti, Country.Denmark, Country.Dominica, Country.DominicanRepublic, Country.Algeria, Country.Ecuador, Country.Estonia, Country.Egypt, Country.WesternSahara, Country.Eritrea, Country.Spain, Country.Ethiopia, Country.Finland, Country.Fiji, Country.FalklandIslands, Country.Micronesia, Country.FaeroeIslands, Country.France, Country.Gabon, Country.UnitedKingdomOfGreatBritainAndNIreland, Country.Grenada, Country.Georgia, Country.FrenchGuiana, Country.Guernsey, Country.Ghana, Country.Gibraltar, Country.Greenland, Country.Gambia, Country.Guinea, Country.Guadaloupe, Country.EquatorialGuinea, Country.Greece, Country.SouthGeorgiaAndTheSouthSandwichIslands, Country.Guatemala, Country.Guam, Country.GuineaBissau, Country.Guyana, Country.HongKong, Country.HeardAndMcDonaldIslands, Country.Honduras, Country.Hrvatska, Country.Haiti, Country.Hungary, Country.Indonesia, Country.Ireland, Country.Israel, Country.IsleOfMan, Country.India, Country.BritishIndianOceanTerritory, Country.Iraq, Country.Iran, Country.Iceland, Country.Italy, Country.Jersey, Country.Jamaica, Country.Jordan, Country.Japan, Country.Kenya, Country.KyrgyzRepublic, Country.Cambodia, Country.Kiribati, Country.Comoros, Country.StKittsAndNevis, Country.Korea, Country.Korea, Country.Kuwait, Country.CaymanIslands, Country.Kazakhstan, Country.LaoPeoplesDemocraticRepublic, Country.Lebanon, Country.StLucia, Country.Liechtenstein, Country.SriLanka, Country.Liberia, Country.Lesotho, Country.Lithuania, Country.Luxembourg, Country.Latvia, Country.Libya, Country.Morocco, Country.Monaco, Country.Moldova, Country.Montenegro, Country.SaintMartin, Country.Madagascar, Country.MarshallIslands, Country.Macedonia, Country.Mali, Country.Myanmar, Country.Mongolia, Country.Macao, Country.NorthernMarianaIslands, Country.Martinique, Country.Mauritania, Country.Montserrat, Country.Malta, Country.Mauritius, Country.Maldives, Country.Malawi, Country.Mexico, Country.Malaysia, Country.Mozambique, Country.Namibia, Country.NewCaledonia, Country.Niger, Country.NorfolkIsland, Country.Nigeria, Country.Nicaragua, Country.Netherlands, Country.Norway, Country.Nepal, Country.Nauru, Country.Niue, Country.NewZealand, Country.Oman, Country.Panama, Country.Peru, Country.FrenchPolynesia, Country.PapuaNewGuinea, Country.Philippines, Country.Pakistan, Country.Poland, Country.StPierreAndMiquelon, Country.PitcairnIsland, Country.PuertoRico, Country.Palestine, Country.Portugal, Country.Palau, Country.Paraguay, Country.Qatar, Country.Reunion, Country.Romania, Country.Serbia, Country.RussianFederation, Country.Rwanda, Country.SaudiArabia, Country.SolomonIslands, Country.Seychelles, Country.Sudan, Country.Sweden, Country.Singapore, Country.SaintHelena, Country.Slovenia, Country.SvalbardAndJanMayenIslands, Country.Slovakia, Country.SierraLeone, Country.SanMarino, Country.Senegal, Country.Somalia, Country.Suriname, Country.SouthSudan, Country.SaoTomeAndPrincipe, Country.ElSalvador, Country.SintMaarten, Country.SyrianArabRepublic, Country.Swaziland, Country.TurksAndCaicosIslands, Country.Chad, Country.FrenchSouthernTerritories, Country.Togo, Country.Thailand, Country.Tajikistan, Country.Tokelau, Country.TimorLeste, Country.Turkmenistan, Country.Tunisia, Country.Tonga, Country.Turkey, Country.TrinidadAndTobago, Country.Tuvalu, Country.Taiwan, Country.Tanzania, Country.Ukraine, Country.Uganda, Country.UnitedStatesMinorOutlyingIslands, Country.UnitedStatesOfAmerica, Country.Uruguay, Country.Uzbekistan, Country.HolySee, Country.StVincentAndTheGrenadines, Country.Venezuela, Country.BritishVirginIslands, Country.USVirginIslands, Country.VietNam, Country.Vanuatu, Country.WallisAndFutunaIslands, Country.Samoa, Country.Yemen, Country.Mayotte, Country.SouthAfrica, Country.Zambia, Country.Zimbabwe, {
+public sealed interface Country extends AdministrativeArea permits Country.Andorra, Country.UnitedArabEmirates, Country.Afghanistan, Country.AntiguaAndBarbuda, Country.Anguilla, Country.Albania, Country.Armenia, Country.Angola, Country.Antarctica, Country.Argentina, Country.AmericanSamoa, Country.Austria, Country.Australia, Country.Aruba, Country.Azerbaijan, Country.BosniaAndHerzegovina, Country.Barbados, Country.Bangladesh, Country.Belgium, Country.BurkinaFaso, Country.Bulgaria, Country.Bahrain, Country.Burundi, Country.Benin, Country.Bermuda, Country.BruneiDarussalam, Country.Bolivia, Country.Bonaire, Country.Brazil, Country.Bahamas, Country.Bhutan, Country.BouvetIsland, Country.Botswana, Country.Belarus, Country.Belize, Country.Canada, Country.CocosIslands, Country.DRCongo, Country.CentralAfricanRepublic, Country.PRCongo, Country.Switzerland, Country.CoteDIvoire, Country.CookIslands, Country.Chile, Country.Cameroon, Country.China, Country.Colombia, Country.CostaRica, Country.Cuba, Country.CapeVerde, Country.ChristmasIsland, Country.Cyprus, Country.CzechRepublic, Country.Germany, Country.Djibouti, Country.Denmark, Country.Dominica, Country.DominicanRepublic, Country.Algeria, Country.Ecuador, Country.Estonia, Country.Egypt, Country.WesternSahara, Country.Eritrea, Country.Spain, Country.Ethiopia, Country.Finland, Country.Fiji, Country.FalklandIslands, Country.Micronesia, Country.FaeroeIslands, Country.France, Country.Gabon, Country.UnitedKingdomOfGreatBritainAndNIreland, Country.Grenada, Country.Georgia, Country.FrenchGuiana, Country.Guernsey, Country.Ghana, Country.Gibraltar, Country.Greenland, Country.Gambia, Country.Guinea, Country.Guadaloupe, Country.EquatorialGuinea, Country.Greece, Country.SouthGeorgiaAndTheSouthSandwichIslands, Country.Guatemala, Country.Guam, Country.GuineaBissau, Country.Guyana, Country.HongKong, Country.HeardAndMcDonaldIslands, Country.Honduras, Country.Hrvatska, Country.Haiti, Country.Hungary, Country.Indonesia, Country.Ireland, Country.Israel, Country.IsleOfMan, Country.India, Country.BritishIndianOceanTerritory, Country.Iraq, Country.Iran, Country.Iceland, Country.Italy, Country.Jersey, Country.Jamaica, Country.Jordan, Country.Japan, Country.Kenya, Country.KyrgyzRepublic, Country.Cambodia, Country.Kiribati, Country.Comoros, Country.StKittsAndNevis, Country.NorthKorea, Country.SouthKorea, Country.Kuwait, Country.CaymanIslands, Country.Kazakhstan, Country.LaoPeoplesDemocraticRepublic, Country.Lebanon, Country.StLucia, Country.Liechtenstein, Country.SriLanka, Country.Liberia, Country.Lesotho, Country.Lithuania, Country.Luxembourg, Country.Latvia, Country.Libya, Country.Morocco, Country.Monaco, Country.Moldova, Country.Montenegro, Country.SaintMartin, Country.Madagascar, Country.MarshallIslands, Country.Macedonia, Country.Mali, Country.Myanmar, Country.Mongolia, Country.Macao, Country.NorthernMarianaIslands, Country.Martinique, Country.Mauritania, Country.Montserrat, Country.Malta, Country.Mauritius, Country.Maldives, Country.Malawi, Country.Mexico, Country.Malaysia, Country.Mozambique, Country.Namibia, Country.NewCaledonia, Country.Niger, Country.NorfolkIsland, Country.Nigeria, Country.Nicaragua, Country.Netherlands, Country.Norway, Country.Nepal, Country.Nauru, Country.Niue, Country.NewZealand, Country.Oman, Country.Panama, Country.Peru, Country.FrenchPolynesia, Country.PapuaNewGuinea, Country.Philippines, Country.Pakistan, Country.Poland, Country.StPierreAndMiquelon, Country.PitcairnIsland, Country.PuertoRico, Country.Palestine, Country.Portugal, Country.Palau, Country.Paraguay, Country.Qatar, Country.Reunion, Country.Romania, Country.Serbia, Country.RussianFederation, Country.Rwanda, Country.SaudiArabia, Country.SolomonIslands, Country.Seychelles, Country.Sudan, Country.Sweden, Country.Singapore, Country.SaintHelena, Country.Slovenia, Country.SvalbardAndJanMayenIslands, Country.Slovakia, Country.SierraLeone, Country.SanMarino, Country.Senegal, Country.Somalia, Country.Suriname, Country.SouthSudan, Country.SaoTomeAndPrincipe, Country.ElSalvador, Country.SintMaarten, Country.SyrianArabRepublic, Country.Swaziland, Country.TurksAndCaicosIslands, Country.Chad, Country.FrenchSouthernTerritories, Country.Togo, Country.Thailand, Country.Tajikistan, Country.Tokelau, Country.TimorLeste, Country.Turkmenistan, Country.Tunisia, Country.Tonga, Country.Turkey, Country.TrinidadAndTobago, Country.Tuvalu, Country.Taiwan, Country.Tanzania, Country.Ukraine, Country.Uganda, Country.UnitedStatesMinorOutlyingIslands, Country.UnitedStatesOfAmerica, Country.Uruguay, Country.Uzbekistan, Country.HolySee, Country.StVincentAndTheGrenadines, Country.Venezuela, Country.BritishVirginIslands, Country.USVirginIslands, Country.VietNam, Country.Vanuatu, Country.WallisAndFutunaIslands, Country.Samoa, Country.Yemen, Country.Mayotte, Country.SouthAfrica, Country.Zambia, Country.Zimbabwe {
   String name();
 
   String code();
@@ -297,1480 +297,1480 @@ public sealed interface Country extends AdministrativeArea permits  Country.Ando
   }
 
   
-  record AD(String name, String code) implements Country {
-    public AD {
+  record Andorra(String name, String code) implements Country {
+    public Andorra {
       name = "Andorra";
-      code = "Andorra";
+      code = "AD";
     }
   } 
-  record AE(String name, String code) implements Country {
-    public AE {
+  record UnitedArabEmirates(String name, String code) implements Country {
+    public UnitedArabEmirates {
       name = "United Arab Emirates";
-      code = "UnitedArabEmirates";
+      code = "AE";
     }
   } 
-  record AF(String name, String code) implements Country {
-    public AF {
+  record Afghanistan(String name, String code) implements Country {
+    public Afghanistan {
       name = "Afghanistan";
-      code = "Afghanistan";
+      code = "AF";
     }
   } 
-  record AG(String name, String code) implements Country {
-    public AG {
+  record AntiguaAndBarbuda(String name, String code) implements Country {
+    public AntiguaAndBarbuda {
       name = "Antigua and Barbuda";
-      code = "AntiguaAndBarbuda";
+      code = "AG";
     }
   } 
-  record AI(String name, String code) implements Country {
-    public AI {
+  record Anguilla(String name, String code) implements Country {
+    public Anguilla {
       name = "Anguilla";
-      code = "Anguilla";
+      code = "AI";
     }
   } 
-  record AL(String name, String code) implements Country {
-    public AL {
+  record Albania(String name, String code) implements Country {
+    public Albania {
       name = "Albania";
-      code = "Albania";
+      code = "AL";
     }
   } 
-  record AM(String name, String code) implements Country {
-    public AM {
+  record Armenia(String name, String code) implements Country {
+    public Armenia {
       name = "Armenia";
-      code = "Armenia";
+      code = "AM";
     }
   } 
-  record AO(String name, String code) implements Country {
-    public AO {
+  record Angola(String name, String code) implements Country {
+    public Angola {
       name = "Angola";
-      code = "Angola";
+      code = "AO";
     }
   } 
-  record AQ(String name, String code) implements Country {
-    public AQ {
+  record Antarctica(String name, String code) implements Country {
+    public Antarctica {
       name = "Antarctica";
-      code = "Antarctica";
+      code = "AQ";
     }
   } 
-  record AR(String name, String code) implements Country {
-    public AR {
+  record Argentina(String name, String code) implements Country {
+    public Argentina {
       name = "Argentina";
-      code = "Argentina";
+      code = "AR";
     }
   } 
-  record AS(String name, String code) implements Country {
-    public AS {
+  record AmericanSamoa(String name, String code) implements Country {
+    public AmericanSamoa {
       name = "American Samoa";
-      code = "AmericanSamoa";
+      code = "AS";
     }
   } 
-  record AT(String name, String code) implements Country {
-    public AT {
+  record Austria(String name, String code) implements Country {
+    public Austria {
       name = "Austria";
-      code = "Austria";
+      code = "AT";
     }
   } 
-  record AU(String name, String code) implements Country {
-    public AU {
+  record Australia(String name, String code) implements Country {
+    public Australia {
       name = "Australia";
-      code = "Australia";
+      code = "AU";
     }
   } 
-  record AW(String name, String code) implements Country {
-    public AW {
+  record Aruba(String name, String code) implements Country {
+    public Aruba {
       name = "Aruba";
-      code = "Aruba";
+      code = "AW";
     }
   } 
-  record AZ(String name, String code) implements Country {
-    public AZ {
+  record Azerbaijan(String name, String code) implements Country {
+    public Azerbaijan {
       name = "Azerbaijan";
-      code = "Azerbaijan";
+      code = "AZ";
     }
   } 
-  record BA(String name, String code) implements Country {
-    public BA {
+  record BosniaAndHerzegovina(String name, String code) implements Country {
+    public BosniaAndHerzegovina {
       name = "Bosnia and Herzegovina";
-      code = "BosniaAndHerzegovina";
+      code = "BA";
     }
   } 
-  record BB(String name, String code) implements Country {
-    public BB {
+  record Barbados(String name, String code) implements Country {
+    public Barbados {
       name = "Barbados";
-      code = "Barbados";
+      code = "BB";
     }
   } 
-  record BD(String name, String code) implements Country {
-    public BD {
+  record Bangladesh(String name, String code) implements Country {
+    public Bangladesh {
       name = "Bangladesh";
-      code = "Bangladesh";
+      code = "BD";
     }
   } 
-  record BE(String name, String code) implements Country {
-    public BE {
+  record Belgium(String name, String code) implements Country {
+    public Belgium {
       name = "Belgium";
-      code = "Belgium";
+      code = "BE";
     }
   } 
-  record BF(String name, String code) implements Country {
-    public BF {
+  record BurkinaFaso(String name, String code) implements Country {
+    public BurkinaFaso {
       name = "Burkina Faso";
-      code = "BurkinaFaso";
+      code = "BF";
     }
   } 
-  record BG(String name, String code) implements Country {
-    public BG {
+  record Bulgaria(String name, String code) implements Country {
+    public Bulgaria {
       name = "Bulgaria";
-      code = "Bulgaria";
+      code = "BG";
     }
   } 
-  record BH(String name, String code) implements Country {
-    public BH {
+  record Bahrain(String name, String code) implements Country {
+    public Bahrain {
       name = "Bahrain";
-      code = "Bahrain";
+      code = "BH";
     }
   } 
-  record BI(String name, String code) implements Country {
-    public BI {
+  record Burundi(String name, String code) implements Country {
+    public Burundi {
       name = "Burundi";
-      code = "Burundi";
+      code = "BI";
     }
   } 
-  record BJ(String name, String code) implements Country {
-    public BJ {
+  record Benin(String name, String code) implements Country {
+    public Benin {
       name = "Benin";
-      code = "Benin";
+      code = "BJ";
     }
   } 
-  record BM(String name, String code) implements Country {
-    public BM {
+  record Bermuda(String name, String code) implements Country {
+    public Bermuda {
       name = "Bermuda";
-      code = "Bermuda";
+      code = "BM";
     }
   } 
-  record BN(String name, String code) implements Country {
-    public BN {
+  record BruneiDarussalam(String name, String code) implements Country {
+    public BruneiDarussalam {
       name = "Brunei Darussalam";
-      code = "BruneiDarussalam";
+      code = "BN";
     }
   } 
-  record BO(String name, String code) implements Country {
-    public BO {
+  record Bolivia(String name, String code) implements Country {
+    public Bolivia {
       name = "Bolivia";
-      code = "Bolivia";
+      code = "BO";
     }
   } 
-  record BQ(String name, String code) implements Country {
-    public BQ {
+  record Bonaire(String name, String code) implements Country {
+    public Bonaire {
       name = "Bonaire";
-      code = "Bonaire";
+      code = "BQ";
     }
   } 
-  record BR(String name, String code) implements Country {
-    public BR {
+  record Brazil(String name, String code) implements Country {
+    public Brazil {
       name = "Brazil";
-      code = "Brazil";
+      code = "BR";
     }
   } 
-  record BS(String name, String code) implements Country {
-    public BS {
+  record Bahamas(String name, String code) implements Country {
+    public Bahamas {
       name = "Bahamas";
-      code = "Bahamas";
+      code = "BS";
     }
   } 
-  record BT(String name, String code) implements Country {
-    public BT {
+  record Bhutan(String name, String code) implements Country {
+    public Bhutan {
       name = "Bhutan";
-      code = "Bhutan";
+      code = "BT";
     }
   } 
-  record BV(String name, String code) implements Country {
-    public BV {
+  record BouvetIsland(String name, String code) implements Country {
+    public BouvetIsland {
       name = "Bouvet Island";
-      code = "BouvetIsland";
+      code = "BV";
     }
   } 
-  record BW(String name, String code) implements Country {
-    public BW {
+  record Botswana(String name, String code) implements Country {
+    public Botswana {
       name = "Botswana";
-      code = "Botswana";
+      code = "BW";
     }
   } 
-  record BY(String name, String code) implements Country {
-    public BY {
+  record Belarus(String name, String code) implements Country {
+    public Belarus {
       name = "Belarus";
-      code = "Belarus";
+      code = "BY";
     }
   } 
-  record BZ(String name, String code) implements Country {
-    public BZ {
+  record Belize(String name, String code) implements Country {
+    public Belize {
       name = "Belize";
-      code = "Belize";
+      code = "BZ";
     }
   } 
-  record CA(String name, String code) implements Country {
-    public CA {
+  record Canada(String name, String code) implements Country {
+    public Canada {
       name = "Canada";
-      code = "Canada";
+      code = "CA";
     }
   } 
-  record CC(String name, String code) implements Country {
-    public CC {
+  record CocosIslands(String name, String code) implements Country {
+    public CocosIslands {
       name = "Cocos Islands";
-      code = "CocosIslands";
+      code = "CC";
     }
   } 
-  record CD(String name, String code) implements Country {
-    public CD {
-      name = "Congo";
-      code = "Congo";
+  record DRCongo(String name, String code) implements Country {
+    public DRCongo {
+      name = "DR Congo";
+      code = "CD";
     }
   } 
-  record CF(String name, String code) implements Country {
-    public CF {
+  record CentralAfricanRepublic(String name, String code) implements Country {
+    public CentralAfricanRepublic {
       name = "Central African Republic";
-      code = "CentralAfricanRepublic";
+      code = "CF";
     }
   } 
-  record CG(String name, String code) implements Country {
-    public CG {
-      name = "Congo";
-      code = "Congo";
+  record PRCongo(String name, String code) implements Country {
+    public PRCongo {
+      name = "PR Congo";
+      code = "CG";
     }
   } 
-  record CH(String name, String code) implements Country {
-    public CH {
+  record Switzerland(String name, String code) implements Country {
+    public Switzerland {
       name = "Switzerland";
-      code = "Switzerland";
+      code = "CH";
     }
   } 
-  record CI(String name, String code) implements Country {
-    public CI {
+  record CoteDIvoire(String name, String code) implements Country {
+    public CoteDIvoire {
       name = "Cote DIvoire";
-      code = "CoteDIvoire";
+      code = "CI";
     }
   } 
-  record CK(String name, String code) implements Country {
-    public CK {
+  record CookIslands(String name, String code) implements Country {
+    public CookIslands {
       name = "Cook Islands";
-      code = "CookIslands";
+      code = "CK";
     }
   } 
-  record CL(String name, String code) implements Country {
-    public CL {
+  record Chile(String name, String code) implements Country {
+    public Chile {
       name = "Chile";
-      code = "Chile";
+      code = "CL";
     }
   } 
-  record CM(String name, String code) implements Country {
-    public CM {
+  record Cameroon(String name, String code) implements Country {
+    public Cameroon {
       name = "Cameroon";
-      code = "Cameroon";
+      code = "CM";
     }
   } 
-  record CN(String name, String code) implements Country {
-    public CN {
+  record China(String name, String code) implements Country {
+    public China {
       name = "China";
-      code = "China";
+      code = "CN";
     }
   } 
-  record CO(String name, String code) implements Country {
-    public CO {
+  record Colombia(String name, String code) implements Country {
+    public Colombia {
       name = "Colombia";
-      code = "Colombia";
+      code = "CO";
     }
   } 
-  record CR(String name, String code) implements Country {
-    public CR {
+  record CostaRica(String name, String code) implements Country {
+    public CostaRica {
       name = "Costa Rica";
-      code = "CostaRica";
+      code = "CR";
     }
   } 
-  record CU(String name, String code) implements Country {
-    public CU {
+  record Cuba(String name, String code) implements Country {
+    public Cuba {
       name = "Cuba";
-      code = "Cuba";
+      code = "CU";
     }
   } 
-  record CV(String name, String code) implements Country {
-    public CV {
+  record CapeVerde(String name, String code) implements Country {
+    public CapeVerde {
       name = "Cape Verde";
-      code = "CapeVerde";
+      code = "CV";
     }
   } 
-  record CX(String name, String code) implements Country {
-    public CX {
+  record ChristmasIsland(String name, String code) implements Country {
+    public ChristmasIsland {
       name = "Christmas Island";
-      code = "ChristmasIsland";
+      code = "CX";
     }
   } 
-  record CY(String name, String code) implements Country {
-    public CY {
+  record Cyprus(String name, String code) implements Country {
+    public Cyprus {
       name = "Cyprus";
-      code = "Cyprus";
+      code = "CY";
     }
   } 
-  record CZ(String name, String code) implements Country {
-    public CZ {
+  record CzechRepublic(String name, String code) implements Country {
+    public CzechRepublic {
       name = "Czech Republic";
-      code = "CzechRepublic";
+      code = "CZ";
     }
   } 
-  record DE(String name, String code) implements Country {
-    public DE {
+  record Germany(String name, String code) implements Country {
+    public Germany {
       name = "Germany";
-      code = "Germany";
+      code = "DE";
     }
   } 
-  record DJ(String name, String code) implements Country {
-    public DJ {
+  record Djibouti(String name, String code) implements Country {
+    public Djibouti {
       name = "Djibouti";
-      code = "Djibouti";
+      code = "DJ";
     }
   } 
-  record DK(String name, String code) implements Country {
-    public DK {
+  record Denmark(String name, String code) implements Country {
+    public Denmark {
       name = "Denmark";
-      code = "Denmark";
+      code = "DK";
     }
   } 
-  record DM(String name, String code) implements Country {
-    public DM {
+  record Dominica(String name, String code) implements Country {
+    public Dominica {
       name = "Dominica";
-      code = "Dominica";
+      code = "DM";
     }
   } 
-  record DO(String name, String code) implements Country {
-    public DO {
+  record DominicanRepublic(String name, String code) implements Country {
+    public DominicanRepublic {
       name = "Dominican Republic";
-      code = "DominicanRepublic";
+      code = "DO";
     }
   } 
-  record DZ(String name, String code) implements Country {
-    public DZ {
+  record Algeria(String name, String code) implements Country {
+    public Algeria {
       name = "Algeria";
-      code = "Algeria";
+      code = "DZ";
     }
   } 
-  record EC(String name, String code) implements Country {
-    public EC {
+  record Ecuador(String name, String code) implements Country {
+    public Ecuador {
       name = "Ecuador";
-      code = "Ecuador";
+      code = "EC";
     }
   } 
-  record EE(String name, String code) implements Country {
-    public EE {
+  record Estonia(String name, String code) implements Country {
+    public Estonia {
       name = "Estonia";
-      code = "Estonia";
+      code = "EE";
     }
   } 
-  record EG(String name, String code) implements Country {
-    public EG {
+  record Egypt(String name, String code) implements Country {
+    public Egypt {
       name = "Egypt";
-      code = "Egypt";
+      code = "EG";
     }
   } 
-  record EH(String name, String code) implements Country {
-    public EH {
+  record WesternSahara(String name, String code) implements Country {
+    public WesternSahara {
       name = "Western Sahara";
-      code = "WesternSahara";
+      code = "EH";
     }
   } 
-  record ER(String name, String code) implements Country {
-    public ER {
+  record Eritrea(String name, String code) implements Country {
+    public Eritrea {
       name = "Eritrea";
-      code = "Eritrea";
+      code = "ER";
     }
   } 
-  record ES(String name, String code) implements Country {
-    public ES {
+  record Spain(String name, String code) implements Country {
+    public Spain {
       name = "Spain";
-      code = "Spain";
+      code = "ES";
     }
   } 
-  record ET(String name, String code) implements Country {
-    public ET {
+  record Ethiopia(String name, String code) implements Country {
+    public Ethiopia {
       name = "Ethiopia";
-      code = "Ethiopia";
+      code = "ET";
     }
   } 
-  record FI(String name, String code) implements Country {
-    public FI {
+  record Finland(String name, String code) implements Country {
+    public Finland {
       name = "Finland";
-      code = "Finland";
+      code = "FI";
     }
   } 
-  record FJ(String name, String code) implements Country {
-    public FJ {
+  record Fiji(String name, String code) implements Country {
+    public Fiji {
       name = "Fiji";
-      code = "Fiji";
+      code = "FJ";
     }
   } 
-  record FK(String name, String code) implements Country {
-    public FK {
+  record FalklandIslands(String name, String code) implements Country {
+    public FalklandIslands {
       name = "Falkland Islands";
-      code = "FalklandIslands";
+      code = "FK";
     }
   } 
-  record FM(String name, String code) implements Country {
-    public FM {
+  record Micronesia(String name, String code) implements Country {
+    public Micronesia {
       name = "Micronesia";
-      code = "Micronesia";
+      code = "FM";
     }
   } 
-  record FO(String name, String code) implements Country {
-    public FO {
+  record FaeroeIslands(String name, String code) implements Country {
+    public FaeroeIslands {
       name = "Faeroe Islands";
-      code = "FaeroeIslands";
+      code = "FO";
     }
   } 
-  record FR(String name, String code) implements Country {
-    public FR {
+  record France(String name, String code) implements Country {
+    public France {
       name = "France";
-      code = "France";
+      code = "FR";
     }
   } 
-  record GA(String name, String code) implements Country {
-    public GA {
+  record Gabon(String name, String code) implements Country {
+    public Gabon {
       name = "Gabon";
-      code = "Gabon";
+      code = "GA";
     }
   } 
-  record GB(String name, String code) implements Country {
-    public GB {
+  record UnitedKingdomOfGreatBritainAndNIreland(String name, String code) implements Country {
+    public UnitedKingdomOfGreatBritainAndNIreland {
       name = "United Kingdom of Great Britain And N Ireland";
-      code = "UnitedKingdomOfGreatBritainAndNIreland";
+      code = "GB";
     }
   } 
-  record GD(String name, String code) implements Country {
-    public GD {
+  record Grenada(String name, String code) implements Country {
+    public Grenada {
       name = "Grenada";
-      code = "Grenada";
+      code = "GD";
     }
   } 
-  record GE(String name, String code) implements Country {
-    public GE {
+  record Georgia(String name, String code) implements Country {
+    public Georgia {
       name = "Georgia";
-      code = "Georgia";
+      code = "GE";
     }
   } 
-  record GF(String name, String code) implements Country {
-    public GF {
+  record FrenchGuiana(String name, String code) implements Country {
+    public FrenchGuiana {
       name = "French Guiana";
-      code = "FrenchGuiana";
+      code = "GF";
     }
   } 
-  record GG(String name, String code) implements Country {
-    public GG {
+  record Guernsey(String name, String code) implements Country {
+    public Guernsey {
       name = "Guernsey";
-      code = "Guernsey";
+      code = "GG";
     }
   } 
-  record GH(String name, String code) implements Country {
-    public GH {
+  record Ghana(String name, String code) implements Country {
+    public Ghana {
       name = "Ghana";
-      code = "Ghana";
+      code = "GH";
     }
   } 
-  record GI(String name, String code) implements Country {
-    public GI {
+  record Gibraltar(String name, String code) implements Country {
+    public Gibraltar {
       name = "Gibraltar";
-      code = "Gibraltar";
+      code = "GI";
     }
   } 
-  record GL(String name, String code) implements Country {
-    public GL {
+  record Greenland(String name, String code) implements Country {
+    public Greenland {
       name = "Greenland";
-      code = "Greenland";
+      code = "GL";
     }
   } 
-  record GM(String name, String code) implements Country {
-    public GM {
+  record Gambia(String name, String code) implements Country {
+    public Gambia {
       name = "Gambia";
-      code = "Gambia";
+      code = "GM";
     }
   } 
-  record GN(String name, String code) implements Country {
-    public GN {
+  record Guinea(String name, String code) implements Country {
+    public Guinea {
       name = "Guinea";
-      code = "Guinea";
+      code = "GN";
     }
   } 
-  record GP(String name, String code) implements Country {
-    public GP {
+  record Guadaloupe(String name, String code) implements Country {
+    public Guadaloupe {
       name = "Guadaloupe";
-      code = "Guadaloupe";
+      code = "GP";
     }
   } 
-  record GQ(String name, String code) implements Country {
-    public GQ {
+  record EquatorialGuinea(String name, String code) implements Country {
+    public EquatorialGuinea {
       name = "Equatorial Guinea";
-      code = "EquatorialGuinea";
+      code = "GQ";
     }
   } 
-  record GR(String name, String code) implements Country {
-    public GR {
+  record Greece(String name, String code) implements Country {
+    public Greece {
       name = "Greece";
-      code = "Greece";
+      code = "GR";
     }
   } 
-  record GS(String name, String code) implements Country {
-    public GS {
+  record SouthGeorgiaAndTheSouthSandwichIslands(String name, String code) implements Country {
+    public SouthGeorgiaAndTheSouthSandwichIslands {
       name = "South Georgia and the South Sandwich Islands";
-      code = "SouthGeorgiaAndTheSouthSandwichIslands";
+      code = "GS";
     }
   } 
-  record GT(String name, String code) implements Country {
-    public GT {
+  record Guatemala(String name, String code) implements Country {
+    public Guatemala {
       name = "Guatemala";
-      code = "Guatemala";
+      code = "GT";
     }
   } 
-  record GU(String name, String code) implements Country {
-    public GU {
+  record Guam(String name, String code) implements Country {
+    public Guam {
       name = "Guam";
-      code = "Guam";
+      code = "GU";
     }
   } 
-  record GW(String name, String code) implements Country {
-    public GW {
+  record GuineaBissau(String name, String code) implements Country {
+    public GuineaBissau {
       name = "GuineaBissau";
-      code = "GuineaBissau";
+      code = "GW";
     }
   } 
-  record GY(String name, String code) implements Country {
-    public GY {
+  record Guyana(String name, String code) implements Country {
+    public Guyana {
       name = "Guyana";
-      code = "Guyana";
+      code = "GY";
     }
   } 
-  record HK(String name, String code) implements Country {
-    public HK {
+  record HongKong(String name, String code) implements Country {
+    public HongKong {
       name = "Hong Kong";
-      code = "HongKong";
+      code = "HK";
     }
   } 
-  record HM(String name, String code) implements Country {
-    public HM {
+  record HeardAndMcDonaldIslands(String name, String code) implements Country {
+    public HeardAndMcDonaldIslands {
       name = "Heard and McDonald Islands";
-      code = "HeardAndMcDonaldIslands";
+      code = "HM";
     }
   } 
-  record HN(String name, String code) implements Country {
-    public HN {
+  record Honduras(String name, String code) implements Country {
+    public Honduras {
       name = "Honduras";
-      code = "Honduras";
+      code = "HN";
     }
   } 
-  record HR(String name, String code) implements Country {
-    public HR {
+  record Hrvatska(String name, String code) implements Country {
+    public Hrvatska {
       name = "Hrvatska";
-      code = "Hrvatska";
+      code = "HR";
     }
   } 
-  record HT(String name, String code) implements Country {
-    public HT {
+  record Haiti(String name, String code) implements Country {
+    public Haiti {
       name = "Haiti";
-      code = "Haiti";
+      code = "HT";
     }
   } 
-  record HU(String name, String code) implements Country {
-    public HU {
+  record Hungary(String name, String code) implements Country {
+    public Hungary {
       name = "Hungary";
-      code = "Hungary";
+      code = "HU";
     }
   } 
-  record ID(String name, String code) implements Country {
-    public ID {
+  record Indonesia(String name, String code) implements Country {
+    public Indonesia {
       name = "Indonesia";
-      code = "Indonesia";
+      code = "ID";
     }
   } 
-  record IE(String name, String code) implements Country {
-    public IE {
+  record Ireland(String name, String code) implements Country {
+    public Ireland {
       name = "Ireland";
-      code = "Ireland";
+      code = "IE";
     }
   } 
-  record IL(String name, String code) implements Country {
-    public IL {
+  record Israel(String name, String code) implements Country {
+    public Israel {
       name = "Israel";
-      code = "Israel";
+      code = "IL";
     }
   } 
-  record IM(String name, String code) implements Country {
-    public IM {
+  record IsleOfMan(String name, String code) implements Country {
+    public IsleOfMan {
       name = "Isle of Man";
-      code = "IsleOfMan";
+      code = "IM";
     }
   } 
-  record IN(String name, String code) implements Country {
-    public IN {
+  record India(String name, String code) implements Country {
+    public India {
       name = "India";
-      code = "India";
+      code = "IN";
     }
   } 
-  record IO(String name, String code) implements Country {
-    public IO {
+  record BritishIndianOceanTerritory(String name, String code) implements Country {
+    public BritishIndianOceanTerritory {
       name = "British Indian Ocean Territory";
-      code = "BritishIndianOceanTerritory";
+      code = "IO";
     }
   } 
-  record IQ(String name, String code) implements Country {
-    public IQ {
+  record Iraq(String name, String code) implements Country {
+    public Iraq {
       name = "Iraq";
-      code = "Iraq";
+      code = "IQ";
     }
   } 
-  record IR(String name, String code) implements Country {
-    public IR {
+  record Iran(String name, String code) implements Country {
+    public Iran {
       name = "Iran";
-      code = "Iran";
+      code = "IR";
     }
   } 
-  record IS(String name, String code) implements Country {
-    public IS {
+  record Iceland(String name, String code) implements Country {
+    public Iceland {
       name = "Iceland";
-      code = "Iceland";
+      code = "IS";
     }
   } 
-  record IT(String name, String code) implements Country {
-    public IT {
+  record Italy(String name, String code) implements Country {
+    public Italy {
       name = "Italy";
-      code = "Italy";
+      code = "IT";
     }
   } 
-  record JE(String name, String code) implements Country {
-    public JE {
+  record Jersey(String name, String code) implements Country {
+    public Jersey {
       name = "Jersey";
-      code = "Jersey";
+      code = "JE";
     }
   } 
-  record JM(String name, String code) implements Country {
-    public JM {
+  record Jamaica(String name, String code) implements Country {
+    public Jamaica {
       name = "Jamaica";
-      code = "Jamaica";
+      code = "JM";
     }
   } 
-  record JO(String name, String code) implements Country {
-    public JO {
+  record Jordan(String name, String code) implements Country {
+    public Jordan {
       name = "Jordan";
-      code = "Jordan";
+      code = "JO";
     }
   } 
-  record JP(String name, String code) implements Country {
-    public JP {
+  record Japan(String name, String code) implements Country {
+    public Japan {
       name = "Japan";
-      code = "Japan";
+      code = "JP";
     }
   } 
-  record KE(String name, String code) implements Country {
-    public KE {
+  record Kenya(String name, String code) implements Country {
+    public Kenya {
       name = "Kenya";
-      code = "Kenya";
+      code = "KE";
     }
   } 
-  record KG(String name, String code) implements Country {
-    public KG {
+  record KyrgyzRepublic(String name, String code) implements Country {
+    public KyrgyzRepublic {
       name = "Kyrgyz Republic";
-      code = "KyrgyzRepublic";
+      code = "KG";
     }
   } 
-  record KH(String name, String code) implements Country {
-    public KH {
+  record Cambodia(String name, String code) implements Country {
+    public Cambodia {
       name = "Cambodia";
-      code = "Cambodia";
+      code = "KH";
     }
   } 
-  record KI(String name, String code) implements Country {
-    public KI {
+  record Kiribati(String name, String code) implements Country {
+    public Kiribati {
       name = "Kiribati";
-      code = "Kiribati";
+      code = "KI";
     }
   } 
-  record KM(String name, String code) implements Country {
-    public KM {
+  record Comoros(String name, String code) implements Country {
+    public Comoros {
       name = "Comoros";
-      code = "Comoros";
+      code = "KM";
     }
   } 
-  record KN(String name, String code) implements Country {
-    public KN {
+  record StKittsAndNevis(String name, String code) implements Country {
+    public StKittsAndNevis {
       name = "St Kitts and Nevis";
-      code = "StKittsAndNevis";
+      code = "KN";
     }
   } 
-  record KP(String name, String code) implements Country {
-    public KP {
-      name = "Korea";
-      code = "Korea";
+  record NorthKorea(String name, String code) implements Country {
+    public NorthKorea {
+      name = "North Korea";
+      code = "KP";
     }
   } 
-  record KR(String name, String code) implements Country {
-    public KR {
-      name = "Korea";
-      code = "Korea";
+  record SouthKorea(String name, String code) implements Country {
+    public SouthKorea {
+      name = "South Korea";
+      code = "KR";
     }
   } 
-  record KW(String name, String code) implements Country {
-    public KW {
+  record Kuwait(String name, String code) implements Country {
+    public Kuwait {
       name = "Kuwait";
-      code = "Kuwait";
+      code = "KW";
     }
   } 
-  record KY(String name, String code) implements Country {
-    public KY {
+  record CaymanIslands(String name, String code) implements Country {
+    public CaymanIslands {
       name = "Cayman Islands";
-      code = "CaymanIslands";
+      code = "KY";
     }
   } 
-  record KZ(String name, String code) implements Country {
-    public KZ {
+  record Kazakhstan(String name, String code) implements Country {
+    public Kazakhstan {
       name = "Kazakhstan";
-      code = "Kazakhstan";
+      code = "KZ";
     }
   } 
-  record LA(String name, String code) implements Country {
-    public LA {
+  record LaoPeoplesDemocraticRepublic(String name, String code) implements Country {
+    public LaoPeoplesDemocraticRepublic {
       name = "Lao Peoples Democratic Republic";
-      code = "LaoPeoplesDemocraticRepublic";
+      code = "LA";
     }
   } 
-  record LB(String name, String code) implements Country {
-    public LB {
+  record Lebanon(String name, String code) implements Country {
+    public Lebanon {
       name = "Lebanon";
-      code = "Lebanon";
+      code = "LB";
     }
   } 
-  record LC(String name, String code) implements Country {
-    public LC {
+  record StLucia(String name, String code) implements Country {
+    public StLucia {
       name = "St Lucia";
-      code = "StLucia";
+      code = "LC";
     }
   } 
-  record LI(String name, String code) implements Country {
-    public LI {
+  record Liechtenstein(String name, String code) implements Country {
+    public Liechtenstein {
       name = "Liechtenstein";
-      code = "Liechtenstein";
+      code = "LI";
     }
   } 
-  record LK(String name, String code) implements Country {
-    public LK {
+  record SriLanka(String name, String code) implements Country {
+    public SriLanka {
       name = "Sri Lanka";
-      code = "SriLanka";
+      code = "LK";
     }
   } 
-  record LR(String name, String code) implements Country {
-    public LR {
+  record Liberia(String name, String code) implements Country {
+    public Liberia {
       name = "Liberia";
-      code = "Liberia";
+      code = "LR";
     }
   } 
-  record LS(String name, String code) implements Country {
-    public LS {
+  record Lesotho(String name, String code) implements Country {
+    public Lesotho {
       name = "Lesotho";
-      code = "Lesotho";
+      code = "LS";
     }
   } 
-  record LT(String name, String code) implements Country {
-    public LT {
+  record Lithuania(String name, String code) implements Country {
+    public Lithuania {
       name = "Lithuania";
-      code = "Lithuania";
+      code = "LT";
     }
   } 
-  record LU(String name, String code) implements Country {
-    public LU {
+  record Luxembourg(String name, String code) implements Country {
+    public Luxembourg {
       name = "Luxembourg";
-      code = "Luxembourg";
+      code = "LU";
     }
   } 
-  record LV(String name, String code) implements Country {
-    public LV {
+  record Latvia(String name, String code) implements Country {
+    public Latvia {
       name = "Latvia";
-      code = "Latvia";
+      code = "LV";
     }
   } 
-  record LY(String name, String code) implements Country {
-    public LY {
+  record Libya(String name, String code) implements Country {
+    public Libya {
       name = "Libya";
-      code = "Libya";
+      code = "LY";
     }
   } 
-  record MA(String name, String code) implements Country {
-    public MA {
+  record Morocco(String name, String code) implements Country {
+    public Morocco {
       name = "Morocco";
-      code = "Morocco";
+      code = "MA";
     }
   } 
-  record MC(String name, String code) implements Country {
-    public MC {
+  record Monaco(String name, String code) implements Country {
+    public Monaco {
       name = "Monaco";
-      code = "Monaco";
+      code = "MC";
     }
   } 
-  record MD(String name, String code) implements Country {
-    public MD {
+  record Moldova(String name, String code) implements Country {
+    public Moldova {
       name = "Moldova";
-      code = "Moldova";
+      code = "MD";
     }
   } 
-  record ME(String name, String code) implements Country {
-    public ME {
+  record Montenegro(String name, String code) implements Country {
+    public Montenegro {
       name = "Montenegro";
-      code = "Montenegro";
+      code = "ME";
     }
   } 
-  record MF(String name, String code) implements Country {
-    public MF {
+  record SaintMartin(String name, String code) implements Country {
+    public SaintMartin {
       name = "Saint Martin";
-      code = "SaintMartin";
+      code = "MF";
     }
   } 
-  record MG(String name, String code) implements Country {
-    public MG {
+  record Madagascar(String name, String code) implements Country {
+    public Madagascar {
       name = "Madagascar";
-      code = "Madagascar";
+      code = "MG";
     }
   } 
-  record MH(String name, String code) implements Country {
-    public MH {
+  record MarshallIslands(String name, String code) implements Country {
+    public MarshallIslands {
       name = "Marshall Islands";
-      code = "MarshallIslands";
+      code = "MH";
     }
   } 
-  record MK(String name, String code) implements Country {
-    public MK {
+  record Macedonia(String name, String code) implements Country {
+    public Macedonia {
       name = "Macedonia";
-      code = "Macedonia";
+      code = "MK";
     }
   } 
-  record ML(String name, String code) implements Country {
-    public ML {
+  record Mali(String name, String code) implements Country {
+    public Mali {
       name = "Mali";
-      code = "Mali";
+      code = "ML";
     }
   } 
-  record MM(String name, String code) implements Country {
-    public MM {
+  record Myanmar(String name, String code) implements Country {
+    public Myanmar {
       name = "Myanmar";
-      code = "Myanmar";
+      code = "MM";
     }
   } 
-  record MN(String name, String code) implements Country {
-    public MN {
+  record Mongolia(String name, String code) implements Country {
+    public Mongolia {
       name = "Mongolia";
-      code = "Mongolia";
+      code = "MN";
     }
   } 
-  record MO(String name, String code) implements Country {
-    public MO {
+  record Macao(String name, String code) implements Country {
+    public Macao {
       name = "Macao";
-      code = "Macao";
+      code = "MO";
     }
   } 
-  record MP(String name, String code) implements Country {
-    public MP {
+  record NorthernMarianaIslands(String name, String code) implements Country {
+    public NorthernMarianaIslands {
       name = "Northern Mariana Islands";
-      code = "NorthernMarianaIslands";
+      code = "MP";
     }
   } 
-  record MQ(String name, String code) implements Country {
-    public MQ {
+  record Martinique(String name, String code) implements Country {
+    public Martinique {
       name = "Martinique";
-      code = "Martinique";
+      code = "MQ";
     }
   } 
-  record MR(String name, String code) implements Country {
-    public MR {
+  record Mauritania(String name, String code) implements Country {
+    public Mauritania {
       name = "Mauritania";
-      code = "Mauritania";
+      code = "MR";
     }
   } 
-  record MS(String name, String code) implements Country {
-    public MS {
+  record Montserrat(String name, String code) implements Country {
+    public Montserrat {
       name = "Montserrat";
-      code = "Montserrat";
+      code = "MS";
     }
   } 
-  record MT(String name, String code) implements Country {
-    public MT {
+  record Malta(String name, String code) implements Country {
+    public Malta {
       name = "Malta";
-      code = "Malta";
+      code = "MT";
     }
   } 
-  record MU(String name, String code) implements Country {
-    public MU {
+  record Mauritius(String name, String code) implements Country {
+    public Mauritius {
       name = "Mauritius";
-      code = "Mauritius";
+      code = "MU";
     }
   } 
-  record MV(String name, String code) implements Country {
-    public MV {
+  record Maldives(String name, String code) implements Country {
+    public Maldives {
       name = "Maldives";
-      code = "Maldives";
+      code = "MV";
     }
   } 
-  record MW(String name, String code) implements Country {
-    public MW {
+  record Malawi(String name, String code) implements Country {
+    public Malawi {
       name = "Malawi";
-      code = "Malawi";
+      code = "MW";
     }
   } 
-  record MX(String name, String code) implements Country {
-    public MX {
+  record Mexico(String name, String code) implements Country {
+    public Mexico {
       name = "Mexico";
-      code = "Mexico";
+      code = "MX";
     }
   } 
-  record MY(String name, String code) implements Country {
-    public MY {
+  record Malaysia(String name, String code) implements Country {
+    public Malaysia {
       name = "Malaysia";
-      code = "Malaysia";
+      code = "MY";
     }
   } 
-  record MZ(String name, String code) implements Country {
-    public MZ {
+  record Mozambique(String name, String code) implements Country {
+    public Mozambique {
       name = "Mozambique";
-      code = "Mozambique";
+      code = "MZ";
     }
   } 
-  record NA(String name, String code) implements Country {
-    public NA {
+  record Namibia(String name, String code) implements Country {
+    public Namibia {
       name = "Namibia";
-      code = "Namibia";
+      code = "NA";
     }
   } 
-  record NC(String name, String code) implements Country {
-    public NC {
+  record NewCaledonia(String name, String code) implements Country {
+    public NewCaledonia {
       name = "New Caledonia";
-      code = "NewCaledonia";
+      code = "NC";
     }
   } 
-  record NE(String name, String code) implements Country {
-    public NE {
+  record Niger(String name, String code) implements Country {
+    public Niger {
       name = "Niger";
-      code = "Niger";
+      code = "NE";
     }
   } 
-  record NF(String name, String code) implements Country {
-    public NF {
+  record NorfolkIsland(String name, String code) implements Country {
+    public NorfolkIsland {
       name = "Norfolk Island";
-      code = "NorfolkIsland";
+      code = "NF";
     }
   } 
-  record NG(String name, String code) implements Country {
-    public NG {
+  record Nigeria(String name, String code) implements Country {
+    public Nigeria {
       name = "Nigeria";
-      code = "Nigeria";
+      code = "NG";
     }
   } 
-  record NI(String name, String code) implements Country {
-    public NI {
+  record Nicaragua(String name, String code) implements Country {
+    public Nicaragua {
       name = "Nicaragua";
-      code = "Nicaragua";
+      code = "NI";
     }
   } 
-  record NL(String name, String code) implements Country {
-    public NL {
+  record Netherlands(String name, String code) implements Country {
+    public Netherlands {
       name = "Netherlands";
-      code = "Netherlands";
+      code = "NL";
     }
   } 
-  record NO(String name, String code) implements Country {
-    public NO {
+  record Norway(String name, String code) implements Country {
+    public Norway {
       name = "Norway";
-      code = "Norway";
+      code = "NO";
     }
   } 
-  record NP(String name, String code) implements Country {
-    public NP {
+  record Nepal(String name, String code) implements Country {
+    public Nepal {
       name = "Nepal";
-      code = "Nepal";
+      code = "NP";
     }
   } 
-  record NR(String name, String code) implements Country {
-    public NR {
+  record Nauru(String name, String code) implements Country {
+    public Nauru {
       name = "Nauru";
-      code = "Nauru";
+      code = "NR";
     }
   } 
-  record NU(String name, String code) implements Country {
-    public NU {
+  record Niue(String name, String code) implements Country {
+    public Niue {
       name = "Niue";
-      code = "Niue";
+      code = "NU";
     }
   } 
-  record NZ(String name, String code) implements Country {
-    public NZ {
+  record NewZealand(String name, String code) implements Country {
+    public NewZealand {
       name = "New Zealand";
-      code = "NewZealand";
+      code = "NZ";
     }
   } 
-  record OM(String name, String code) implements Country {
-    public OM {
+  record Oman(String name, String code) implements Country {
+    public Oman {
       name = "Oman";
-      code = "Oman";
+      code = "OM";
     }
   } 
-  record PA(String name, String code) implements Country {
-    public PA {
+  record Panama(String name, String code) implements Country {
+    public Panama {
       name = "Panama";
-      code = "Panama";
+      code = "PA";
     }
   } 
-  record PE(String name, String code) implements Country {
-    public PE {
+  record Peru(String name, String code) implements Country {
+    public Peru {
       name = "Peru";
-      code = "Peru";
+      code = "PE";
     }
   } 
-  record PF(String name, String code) implements Country {
-    public PF {
+  record FrenchPolynesia(String name, String code) implements Country {
+    public FrenchPolynesia {
       name = "French Polynesia";
-      code = "FrenchPolynesia";
+      code = "PF";
     }
   } 
-  record PG(String name, String code) implements Country {
-    public PG {
+  record PapuaNewGuinea(String name, String code) implements Country {
+    public PapuaNewGuinea {
       name = "Papua New Guinea";
-      code = "PapuaNewGuinea";
+      code = "PG";
     }
   } 
-  record PH(String name, String code) implements Country {
-    public PH {
+  record Philippines(String name, String code) implements Country {
+    public Philippines {
       name = "Philippines";
-      code = "Philippines";
+      code = "PH";
     }
   } 
-  record PK(String name, String code) implements Country {
-    public PK {
+  record Pakistan(String name, String code) implements Country {
+    public Pakistan {
       name = "Pakistan";
-      code = "Pakistan";
+      code = "PK";
     }
   } 
-  record PL(String name, String code) implements Country {
-    public PL {
+  record Poland(String name, String code) implements Country {
+    public Poland {
       name = "Poland";
-      code = "Poland";
+      code = "PL";
     }
   } 
-  record PM(String name, String code) implements Country {
-    public PM {
+  record StPierreAndMiquelon(String name, String code) implements Country {
+    public StPierreAndMiquelon {
       name = "St Pierre and Miquelon";
-      code = "StPierreAndMiquelon";
+      code = "PM";
     }
   } 
-  record PN(String name, String code) implements Country {
-    public PN {
+  record PitcairnIsland(String name, String code) implements Country {
+    public PitcairnIsland {
       name = "Pitcairn Island";
-      code = "PitcairnIsland";
+      code = "PN";
     }
   } 
-  record PR(String name, String code) implements Country {
-    public PR {
+  record PuertoRico(String name, String code) implements Country {
+    public PuertoRico {
       name = "Puerto Rico";
-      code = "PuertoRico";
+      code = "PR";
     }
   } 
-  record PS(String name, String code) implements Country {
-    public PS {
+  record Palestine(String name, String code) implements Country {
+    public Palestine {
       name = "Palestine";
-      code = "Palestine";
+      code = "PS";
     }
   } 
-  record PT(String name, String code) implements Country {
-    public PT {
+  record Portugal(String name, String code) implements Country {
+    public Portugal {
       name = "Portugal";
-      code = "Portugal";
+      code = "PT";
     }
   } 
-  record PW(String name, String code) implements Country {
-    public PW {
+  record Palau(String name, String code) implements Country {
+    public Palau {
       name = "Palau";
-      code = "Palau";
+      code = "PW";
     }
   } 
-  record PY(String name, String code) implements Country {
-    public PY {
+  record Paraguay(String name, String code) implements Country {
+    public Paraguay {
       name = "Paraguay";
-      code = "Paraguay";
+      code = "PY";
     }
   } 
-  record QA(String name, String code) implements Country {
-    public QA {
+  record Qatar(String name, String code) implements Country {
+    public Qatar {
       name = "Qatar";
-      code = "Qatar";
+      code = "QA";
     }
   } 
-  record RE(String name, String code) implements Country {
-    public RE {
+  record Reunion(String name, String code) implements Country {
+    public Reunion {
       name = "Reunion";
-      code = "Reunion";
+      code = "RE";
     }
   } 
-  record RO(String name, String code) implements Country {
-    public RO {
+  record Romania(String name, String code) implements Country {
+    public Romania {
       name = "Romania";
-      code = "Romania";
+      code = "RO";
     }
   } 
-  record RS(String name, String code) implements Country {
-    public RS {
+  record Serbia(String name, String code) implements Country {
+    public Serbia {
       name = "Serbia";
-      code = "Serbia";
+      code = "RS";
     }
   } 
-  record RU(String name, String code) implements Country {
-    public RU {
+  record RussianFederation(String name, String code) implements Country {
+    public RussianFederation {
       name = "Russian Federation";
-      code = "RussianFederation";
+      code = "RU";
     }
   } 
-  record RW(String name, String code) implements Country {
-    public RW {
+  record Rwanda(String name, String code) implements Country {
+    public Rwanda {
       name = "Rwanda";
-      code = "Rwanda";
+      code = "RW";
     }
   } 
-  record SA(String name, String code) implements Country {
-    public SA {
+  record SaudiArabia(String name, String code) implements Country {
+    public SaudiArabia {
       name = "Saudi Arabia";
-      code = "SaudiArabia";
+      code = "SA";
     }
   } 
-  record SB(String name, String code) implements Country {
-    public SB {
+  record SolomonIslands(String name, String code) implements Country {
+    public SolomonIslands {
       name = "Solomon Islands";
-      code = "SolomonIslands";
+      code = "SB";
     }
   } 
-  record SC(String name, String code) implements Country {
-    public SC {
+  record Seychelles(String name, String code) implements Country {
+    public Seychelles {
       name = "Seychelles";
-      code = "Seychelles";
+      code = "SC";
     }
   } 
-  record SD(String name, String code) implements Country {
-    public SD {
+  record Sudan(String name, String code) implements Country {
+    public Sudan {
       name = "Sudan";
-      code = "Sudan";
+      code = "SD";
     }
   } 
-  record SE(String name, String code) implements Country {
-    public SE {
+  record Sweden(String name, String code) implements Country {
+    public Sweden {
       name = "Sweden";
-      code = "Sweden";
+      code = "SE";
     }
   } 
-  record SG(String name, String code) implements Country {
-    public SG {
+  record Singapore(String name, String code) implements Country {
+    public Singapore {
       name = "Singapore";
-      code = "Singapore";
+      code = "SG";
     }
   } 
-  record SH(String name, String code) implements Country {
-    public SH {
+  record SaintHelena(String name, String code) implements Country {
+    public SaintHelena {
       name = "Saint Helena";
-      code = "SaintHelena";
+      code = "SH";
     }
   } 
-  record SI(String name, String code) implements Country {
-    public SI {
+  record Slovenia(String name, String code) implements Country {
+    public Slovenia {
       name = "Slovenia";
-      code = "Slovenia";
+      code = "SI";
     }
   } 
-  record SJ(String name, String code) implements Country {
-    public SJ {
+  record SvalbardAndJanMayenIslands(String name, String code) implements Country {
+    public SvalbardAndJanMayenIslands {
       name = "Svalbard And Jan Mayen Islands";
-      code = "SvalbardAndJanMayenIslands";
+      code = "SJ";
     }
   } 
-  record SK(String name, String code) implements Country {
-    public SK {
+  record Slovakia(String name, String code) implements Country {
+    public Slovakia {
       name = "Slovakia";
-      code = "Slovakia";
+      code = "SK";
     }
   } 
-  record SL(String name, String code) implements Country {
-    public SL {
+  record SierraLeone(String name, String code) implements Country {
+    public SierraLeone {
       name = "Sierra Leone";
-      code = "SierraLeone";
+      code = "SL";
     }
   } 
-  record SM(String name, String code) implements Country {
-    public SM {
+  record SanMarino(String name, String code) implements Country {
+    public SanMarino {
       name = "San Marino";
-      code = "SanMarino";
+      code = "SM";
     }
   } 
-  record SN(String name, String code) implements Country {
-    public SN {
+  record Senegal(String name, String code) implements Country {
+    public Senegal {
       name = "Senegal";
-      code = "Senegal";
+      code = "SN";
     }
   } 
-  record SO(String name, String code) implements Country {
-    public SO {
+  record Somalia(String name, String code) implements Country {
+    public Somalia {
       name = "Somalia";
-      code = "Somalia";
+      code = "SO";
     }
   } 
-  record SR(String name, String code) implements Country {
-    public SR {
+  record Suriname(String name, String code) implements Country {
+    public Suriname {
       name = "Suriname";
-      code = "Suriname";
+      code = "SR";
     }
   } 
-  record SS(String name, String code) implements Country {
-    public SS {
+  record SouthSudan(String name, String code) implements Country {
+    public SouthSudan {
       name = "South Sudan";
-      code = "SouthSudan";
+      code = "SS";
     }
   } 
-  record ST(String name, String code) implements Country {
-    public ST {
+  record SaoTomeAndPrincipe(String name, String code) implements Country {
+    public SaoTomeAndPrincipe {
       name = "Sao Tome and Principe";
-      code = "SaoTomeAndPrincipe";
+      code = "ST";
     }
   } 
-  record SV(String name, String code) implements Country {
-    public SV {
+  record ElSalvador(String name, String code) implements Country {
+    public ElSalvador {
       name = "El Salvador";
-      code = "ElSalvador";
+      code = "SV";
     }
   } 
-  record SX(String name, String code) implements Country {
-    public SX {
+  record SintMaarten(String name, String code) implements Country {
+    public SintMaarten {
       name = "Sint Maarten";
-      code = "SintMaarten";
+      code = "SX";
     }
   } 
-  record SY(String name, String code) implements Country {
-    public SY {
+  record SyrianArabRepublic(String name, String code) implements Country {
+    public SyrianArabRepublic {
       name = "Syrian Arab Republic";
-      code = "SyrianArabRepublic";
+      code = "SY";
     }
   } 
-  record SZ(String name, String code) implements Country {
-    public SZ {
+  record Swaziland(String name, String code) implements Country {
+    public Swaziland {
       name = "Swaziland";
-      code = "Swaziland";
+      code = "SZ";
     }
   } 
-  record TC(String name, String code) implements Country {
-    public TC {
+  record TurksAndCaicosIslands(String name, String code) implements Country {
+    public TurksAndCaicosIslands {
       name = "Turks and Caicos Islands";
-      code = "TurksAndCaicosIslands";
+      code = "TC";
     }
   } 
-  record TD(String name, String code) implements Country {
-    public TD {
+  record Chad(String name, String code) implements Country {
+    public Chad {
       name = "Chad";
-      code = "Chad";
+      code = "TD";
     }
   } 
-  record TF(String name, String code) implements Country {
-    public TF {
+  record FrenchSouthernTerritories(String name, String code) implements Country {
+    public FrenchSouthernTerritories {
       name = "French Southern Territories";
-      code = "FrenchSouthernTerritories";
+      code = "TF";
     }
   } 
-  record TG(String name, String code) implements Country {
-    public TG {
+  record Togo(String name, String code) implements Country {
+    public Togo {
       name = "Togo";
-      code = "Togo";
+      code = "TG";
     }
   } 
-  record TH(String name, String code) implements Country {
-    public TH {
+  record Thailand(String name, String code) implements Country {
+    public Thailand {
       name = "Thailand";
-      code = "Thailand";
+      code = "TH";
     }
   } 
-  record TJ(String name, String code) implements Country {
-    public TJ {
+  record Tajikistan(String name, String code) implements Country {
+    public Tajikistan {
       name = "Tajikistan";
-      code = "Tajikistan";
+      code = "TJ";
     }
   } 
-  record TK(String name, String code) implements Country {
-    public TK {
+  record Tokelau(String name, String code) implements Country {
+    public Tokelau {
       name = "Tokelau";
-      code = "Tokelau";
+      code = "TK";
     }
   } 
-  record TL(String name, String code) implements Country {
-    public TL {
+  record TimorLeste(String name, String code) implements Country {
+    public TimorLeste {
       name = "TimorLeste";
-      code = "TimorLeste";
+      code = "TL";
     }
   } 
-  record TM(String name, String code) implements Country {
-    public TM {
+  record Turkmenistan(String name, String code) implements Country {
+    public Turkmenistan {
       name = "Turkmenistan";
-      code = "Turkmenistan";
+      code = "TM";
     }
   } 
-  record TN(String name, String code) implements Country {
-    public TN {
+  record Tunisia(String name, String code) implements Country {
+    public Tunisia {
       name = "Tunisia";
-      code = "Tunisia";
+      code = "TN";
     }
   } 
-  record TO(String name, String code) implements Country {
-    public TO {
+  record Tonga(String name, String code) implements Country {
+    public Tonga {
       name = "Tonga";
-      code = "Tonga";
+      code = "TO";
     }
   } 
-  record TR(String name, String code) implements Country {
-    public TR {
+  record Turkey(String name, String code) implements Country {
+    public Turkey {
       name = "Turkey";
-      code = "Turkey";
+      code = "TR";
     }
   } 
-  record TT(String name, String code) implements Country {
-    public TT {
+  record TrinidadAndTobago(String name, String code) implements Country {
+    public TrinidadAndTobago {
       name = "Trinidad and Tobago";
-      code = "TrinidadAndTobago";
+      code = "TT";
     }
   } 
-  record TV(String name, String code) implements Country {
-    public TV {
+  record Tuvalu(String name, String code) implements Country {
+    public Tuvalu {
       name = "Tuvalu";
-      code = "Tuvalu";
+      code = "TV";
     }
   } 
-  record TW(String name, String code) implements Country {
-    public TW {
+  record Taiwan(String name, String code) implements Country {
+    public Taiwan {
       name = "Taiwan";
-      code = "Taiwan";
+      code = "TW";
     }
   } 
-  record TZ(String name, String code) implements Country {
-    public TZ {
+  record Tanzania(String name, String code) implements Country {
+    public Tanzania {
       name = "Tanzania";
-      code = "Tanzania";
+      code = "TZ";
     }
   } 
-  record UA(String name, String code) implements Country {
-    public UA {
+  record Ukraine(String name, String code) implements Country {
+    public Ukraine {
       name = "Ukraine";
-      code = "Ukraine";
+      code = "UA";
     }
   } 
-  record UG(String name, String code) implements Country {
-    public UG {
+  record Uganda(String name, String code) implements Country {
+    public Uganda {
       name = "Uganda";
-      code = "Uganda";
+      code = "UG";
     }
   } 
-  record UM(String name, String code) implements Country {
-    public UM {
+  record UnitedStatesMinorOutlyingIslands(String name, String code) implements Country {
+    public UnitedStatesMinorOutlyingIslands {
       name = "United States Minor Outlying Islands";
-      code = "UnitedStatesMinorOutlyingIslands";
+      code = "UM";
     }
   } 
-  record US(String name, String code) implements Country {
-    public US {
+  record UnitedStatesOfAmerica(String name, String code) implements Country {
+    public UnitedStatesOfAmerica {
       name = "United States of America";
-      code = "UnitedStatesOfAmerica";
+      code = "US";
     }
   } 
-  record UY(String name, String code) implements Country {
-    public UY {
+  record Uruguay(String name, String code) implements Country {
+    public Uruguay {
       name = "Uruguay";
-      code = "Uruguay";
+      code = "UY";
     }
   } 
-  record UZ(String name, String code) implements Country {
-    public UZ {
+  record Uzbekistan(String name, String code) implements Country {
+    public Uzbekistan {
       name = "Uzbekistan";
-      code = "Uzbekistan";
+      code = "UZ";
     }
   } 
-  record VA(String name, String code) implements Country {
-    public VA {
+  record HolySee(String name, String code) implements Country {
+    public HolySee {
       name = "Holy See";
-      code = "HolySee";
+      code = "VA";
     }
   } 
-  record VC(String name, String code) implements Country {
-    public VC {
+  record StVincentAndTheGrenadines(String name, String code) implements Country {
+    public StVincentAndTheGrenadines {
       name = "St Vincent and the Grenadines";
-      code = "StVincentAndTheGrenadines";
+      code = "VC";
     }
   } 
-  record VE(String name, String code) implements Country {
-    public VE {
+  record Venezuela(String name, String code) implements Country {
+    public Venezuela {
       name = "Venezuela";
-      code = "Venezuela";
+      code = "VE";
     }
   } 
-  record VG(String name, String code) implements Country {
-    public VG {
+  record BritishVirginIslands(String name, String code) implements Country {
+    public BritishVirginIslands {
       name = "British Virgin Islands";
-      code = "BritishVirginIslands";
+      code = "VG";
     }
   } 
-  record VI(String name, String code) implements Country {
-    public VI {
+  record USVirginIslands(String name, String code) implements Country {
+    public USVirginIslands {
       name = "US Virgin Islands";
-      code = "USVirginIslands";
+      code = "VI";
     }
   } 
-  record VN(String name, String code) implements Country {
-    public VN {
+  record VietNam(String name, String code) implements Country {
+    public VietNam {
       name = "Viet Nam";
-      code = "VietNam";
+      code = "VN";
     }
   } 
-  record VU(String name, String code) implements Country {
-    public VU {
+  record Vanuatu(String name, String code) implements Country {
+    public Vanuatu {
       name = "Vanuatu";
-      code = "Vanuatu";
+      code = "VU";
     }
   } 
-  record WF(String name, String code) implements Country {
-    public WF {
+  record WallisAndFutunaIslands(String name, String code) implements Country {
+    public WallisAndFutunaIslands {
       name = "Wallis and Futuna Islands";
-      code = "WallisAndFutunaIslands";
+      code = "WF";
     }
   } 
-  record WS(String name, String code) implements Country {
-    public WS {
+  record Samoa(String name, String code) implements Country {
+    public Samoa {
       name = "Samoa";
-      code = "Samoa";
+      code = "WS";
     }
   } 
-  record YE(String name, String code) implements Country {
-    public YE {
+  record Yemen(String name, String code) implements Country {
+    public Yemen {
       name = "Yemen";
-      code = "Yemen";
+      code = "YE";
     }
   } 
-  record YT(String name, String code) implements Country {
-    public YT {
+  record Mayotte(String name, String code) implements Country {
+    public Mayotte {
       name = "Mayotte";
-      code = "Mayotte";
+      code = "YT";
     }
   } 
-  record ZA(String name, String code) implements Country {
-    public ZA {
+  record SouthAfrica(String name, String code) implements Country {
+    public SouthAfrica {
       name = "South Africa";
-      code = "SouthAfrica";
+      code = "ZA";
     }
   } 
-  record ZM(String name, String code) implements Country {
-    public ZM {
+  record Zambia(String name, String code) implements Country {
+    public Zambia {
       name = "Zambia";
-      code = "Zambia";
+      code = "ZM";
     }
   } 
-  record ZW(String name, String code) implements Country {
-    public ZW {
+  record Zimbabwe(String name, String code) implements Country {
+    public Zimbabwe {
       name = "Zimbabwe";
-      code = "Zimbabwe";
+      code = "ZW";
     }
   } 
 

@@ -2,8 +2,9 @@ import 'dart:io';
 import 'dart:convert';
 
 void main(List<String> arguments) async {
-  String java = await generateJavaCode();
-  await File('Country.java').writeAsString(java);
+  await generateCountryDataJson();
+  //String java = await generateJavaCode();
+  //await File('Country.java').writeAsString(java);
 }
 
 
@@ -108,7 +109,7 @@ Future<String> generateJavaCode() async {
 
   String permits = countries.fold('', (accum, country){
     var CountryData(:identifier, :code) = country;
-    return '$accum Country.$identifier,';
+    return '$accum${accum == '' ? '' : ','} Country.$identifier';
   });
 
   String records = countries.fold('\n', (accum, country){
@@ -124,7 +125,7 @@ String templateJsonSubType(String identifier, String code) => '''
   @JsonSubTypes.Type(value = Country.$identifier.class, name = "$code"),
 ''';
 
-String templateRecord(String name, String code, String identifier) => '''
+String templateRecord(String name, String identifier, String code) => '''
   record $identifier(String name, String code) implements Country {
     public $identifier {
       name = "$name";
@@ -145,7 +146,7 @@ import java.util.UUID;
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "code")
 @JsonSubTypes({$jsonSubTypes})  
-public sealed interface Country extends AdministrativeArea permits $permits {
+public sealed interface Country extends AdministrativeArea permits$permits {
   String name();
 
   String code();
