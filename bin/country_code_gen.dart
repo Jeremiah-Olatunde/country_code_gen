@@ -51,3 +51,48 @@ Future<String> generateCountryDataJson() async {
 
   return jsonGenerated;
 }
+
+
+class CountryData {
+  final String name;
+  final String identifier;
+  final String code;
+
+  CountryData(this.name, this.identifier, this.code);
+
+  @override
+  String toString() => 'CountryData(code: $code, name: $name, identifier: $identifier)';
+}
+
+Future<List<CountryData>> generateCountryData() async {
+  final String jsonRaw = await File('raw.json').readAsString();
+  final List<dynamic> jsonParsed = json.decode(jsonRaw);
+  final List<CountryData> countryData = [];
+
+  for(var {'code': String code, 'name': String name} in jsonParsed){
+    name = name.split(',').first;
+    name = name.replaceAll(RegExp(r'\s\(.*\)'), '');
+    name = name.replaceAll(RegExp(r"('|\.|-)"), '');
+    name = name.replaceAll(RegExp(r'&'), 'And');
+    String identifier = toCamelCase(name);
+
+    bool validIdentifier = RegExp(r'^[A-Za-z]+$').hasMatch(identifier);
+
+    if(validIdentifier){
+      countryData.add(CountryData(name, identifier, code));
+    }
+  }
+
+  return countryData;
+}
+
+String toCamelCase(String str){
+  return str.replaceAllMapped(RegExp(r'\s(?<target>\w)'), (match) {
+    String? firstLetter = match.group(1)?.toUpperCase();
+    if (firstLetter == null) {
+      throw "regex error";
+    }
+    return firstLetter;
+  });
+}
+
