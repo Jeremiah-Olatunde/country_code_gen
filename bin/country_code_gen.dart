@@ -2,6 +2,8 @@ import 'dart:io';
 import 'dart:convert';
 
 void main(List<String> arguments) async {
+  String java = await generateJavaCode();
+  await File('Country.java').writeAsString(java);
 }
 
 
@@ -96,3 +98,94 @@ String toCamelCase(String str){
   });
 }
 
+Future<String> generateJavaCode() async {
+  List<CountryData> countries = await generateCountryData();
+
+  String jsonSubTypes = countries.fold('\n', (accum, country){
+    var CountryData(:code, :identifier) = country;
+    return '$accum${templateJsonSubType(identifier, code)}';
+  });
+
+  String permits = countries.fold('', (accum, country){
+    var CountryData(:identifier, :code) = country;
+    return '$accum Country.$identifier,';
+  });
+
+  String records = countries.fold('\n', (accum, country){
+    var CountryData(:name, :identifier, :code) = country;
+    return '$accum${templateRecord(name, identifier, code)}';
+  }); 
+
+  return template(jsonSubTypes, permits, records);
+}
+
+
+String templateJsonSubType(String identifier, String code) => '''
+  @JsonSubTypes.Type(value = Country.$identifier.class, name = "$code"),
+''';
+
+String templateRecord(String name, String code, String identifier) => '''
+  record $identifier(String name, String code) implements Country {
+    public $identifier {
+      name = "$name";
+      code = "$code";
+    }
+  } 
+''';
+
+
+String template(String jsonSubTypes, String permits, String records) => '''
+package io.pinnacl.commons.data.domain.base;
+
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import io.pinnacl.commons.data.domain.AdministrativeArea;
+
+import java.util.UUID;
+
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "code")
+@JsonSubTypes({$jsonSubTypes})  
+public sealed interface Country extends AdministrativeArea permits $permits {
+  String name();
+
+  String code();
+
+  default Double latitude() {
+      return null;
+  }
+
+  default Double longitude() {
+      return null;
+  }
+
+  default UUID createdBy() {
+      return null;
+  }
+
+  default UUID updatedBy() {
+      return null;
+  }
+
+  default UUID ownerId() {
+      return null;
+  }
+
+  default String hash() {
+      return "";
+  }
+
+  default String description() {
+      return "";
+  }
+
+  default String alternateName() {
+      return "";
+  }
+
+  default UUID id() {
+      return null;
+  }
+
+  $records
+}  
+''';
